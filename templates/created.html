@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Books</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #common {
+            font-weight: 500;
+        }
+
+        #price {
+            color: red;
+            font-weight: 500;
+        }
+
+        #isbn {
+            color: purple;
+            font-weight: 500;
+        }
+        h3{
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <span id="isbn">ISBN : {{.Isbn}}</span> <br>
+        <span id="common">TITLE :</span> {{.Title}} <br>
+        <span id="common">AUTHOR : </span>{{.Author}} <br>
+        <span id="price">PRICE : {{.Price}}</span>
+    </p>
+    <hr>
+    <h3><a href="/books">Homepage</a></h3>
+    <h3><a href="/books/create">Create Book</a></h3>
+</body>
+
+</html>

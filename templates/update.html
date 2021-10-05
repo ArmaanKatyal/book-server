@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update a Book</title>
+    <meta charset="UTF-8">
+    <style>
+        input {
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 5px;
+            border-radius: 5px;
+            border-width: 1px;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        form {
+            padding: 5px;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            animation: mymove 2s ease-in;
+            animation-fill-mode: forwards;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+        }
+
+        #price {
+            color: red;
+
+        }
+
+        #submit {
+            margin-top: 10px;
+            background-color: black;
+            color: white;
+            width: 100px;
+            text-transform: uppercase;
+            border-radius: 10px;
+        }
+
+        #submit:hover {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+        }
+
+        @keyframes mymove {
+            0% {
+                font-size: 24px;
+                color: black;
+            }
+
+            100% {
+                font-size: 48px;
+                color: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Update a Book</h1>
+    <form action="/books/update/process" method="post">
+        <input type="text" name="isbn" id="isbn" placeholder="isbn" value="{{.Isbn}}"><br>
+        <input type="text" name="title" id="title" placeholder="title" value="{{.Title}}"><br>
+        <input type="text" name="author" id="author" placeholder="author" value="{{.Author}}"><br>
+        <input type="text" name="price" id="price" placeholder="price" value="{{.Price}}"><br>
+        <input type="submit" value="submit" id="submit">
+    </form>
+</body>
+
+</html>
